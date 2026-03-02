@@ -1,0 +1,506 @@
+mca@mca38:~/luqman$ ls
+bengali  file.txt  maseeh  newfile2.txt  panjabi  parava  sudani
+mca@mca38:~/luqman$ man ls
+mca@mca38:~/luqman$ man cp
+mca@mca38:~/luqman$ man mkdir
+mca@mca38:~/luqman$ ls
+bengali  file.txt  maseeh  newfile2.txt  panjabi  parava  sudani
+mca@mca38:~/luqman$ ls -l
+total 28
+drwxrwxr-x 2 mca mca 4096 Feb 27 14:37 bengali
+-rw-rw-r-- 1 mca mca   55 Feb 27 14:44 file.txt
+drwxrwxr-x 3 mca mca 4096 Feb 27 14:27 maseeh
+-rw-rw-r-- 1 mca mca   55 Feb 27 14:56 newfile2.txt
+drwxrwxr-x 2 mca mca 4096 Feb 27 14:35 panjabi
+drwxrwxr-x 2 mca mca 4096 Feb 27 14:34 parava
+drwxrwxr-x 2 mca mca 4096 Feb 27 14:35 sudani
+mca@mca38:~/luqman$ ls -a
+.  ..  bengali	file.txt  maseeh  newfile2.txt	panjabi  parava  sudani
+mca@mca38:~/luqman$ ls -lt
+total 28
+-rw-rw-r-- 1 mca mca   55 Feb 27 14:56 newfile2.txt
+-rw-rw-r-- 1 mca mca   55 Feb 27 14:44 file.txt
+drwxrwxr-x 2 mca mca 4096 Feb 27 14:37 bengali
+drwxrwxr-x 2 mca mca 4096 Feb 27 14:35 panjabi
+drwxrwxr-x 2 mca mca 4096 Feb 27 14:35 sudani
+drwxrwxr-x 2 mca mca 4096 Feb 27 14:34 parava
+drwxrwxr-x 3 mca mca 4096 Feb 27 14:27 maseeh
+mca@mca38:~/luqman$ eco "welcome to linux"
+
+Command 'eco' not found, did you mean:
+
+  command 'ego' from snap ego-dev (1.8.1)
+  command 'peco' from snap peco (v0.5.3)
+  command 'ecp' from deb ecere-dev (0.44.15-1build3)
+  command 'echo' from deb coreutils (8.30-3ubuntu2)
+  command 'ecl' from deb ecl (16.1.3+ds-4)
+  command 'ico' from deb x11-apps (7.7+8)
+  command 'ecj' from deb ecj (3.16.0-1)
+  command 'ecm' from deb gmp-ecm (7.0.4+ds-5)
+  command 'ecc' from deb ecere-dev (0.44.15-1build3)
+  command 'peco' from deb peco (0.5.1-1)
+  command 'mco' from deb mcollective-client (2.12.1+dfsg-1)
+  command 'ecs' from deb ecere-dev (0.44.15-1build3)
+  command 'co' from deb rcs (5.9.4-6)
+
+See 'snap info <snapname>' for additional versions.
+
+mca@mca38:~/luqman$ echo "welcome to linux"
+welcome to linux
+mca@mca38:~/luqman$ echo -n
+mca@mca38:~/luqman$ echo -n "enter yor name:"
+enter yor name:mca@mca38:~/luqman$ read varname
+luqman
+mca@mca38:~/luqman$ echo 
+
+mca@mca38:~/luqman$ 
+mca@mca38:~/luqman$ 
+mca@mca38:~/luqman$ 
+mca@mca38:~/luqman$ 
+mca@mca38:~/luqman$ echo $varname
+luqman
+mca@mca38:~/luqman$ read a b
+10 20
+mca@mca38:~/luqman$ echo $a $b
+10 20
+mca@mca38:~/luqman$ cat file.txt
+lukku
+mazee
+amaaan
+today is good day
+good day is today
+mca@mca38:~/luqman$ cat > newfile.txt
+hello world
+this is new filemca@mca38:~/luqman$ cat file.txt file2.txt
+lukku
+mazee
+amaaan
+today is good day
+good day is today
+cat: file2.txt: No such file or directory
+mca@mca38:~/luqman$ cat file.txt newfile.txt
+lukku
+mazee
+amaaan
+today is good day
+good day is today
+hello world
+this is new filemca@mca38:~/luqman$ less file.txt
+mca@mca38:~/luqman$ cd
+mca@mca38:~$ cd 
+mca@mca38:~$ cd -
+/home/mca
+mca@mca38:~$ cd -
+/home/mca
+mca@mca38:~$
+mca@mca38:~/luqman$ mkdir pappa
+mca@mca38:~/luqman$ ls
+bengali   maseeh	newfile.txt  pappa   sudani
+file.txt  newfile2.txt	panjabi      parava
+mca@mca38:~/luqman$ cp file.txt newfile.txt
+mca@mca38:~/luqman$ mv file.txt file3.txt
+mca@mca38:~/luqman$ rm file.txt
+rm: cannot remove 'file.txt': No such file or directory
+mca@mca38:~/luqman$ rm file3.txt
+mca@mca38:~/luqman$ tar -cvf newfile.txt
+tar: Cowardly refusing to create an empty archive
+Try 'tar --help' or 'tar --usage' for more information.
+mca@mca38:~/luqman$ tar -cvf abcd.tar aa
+tar: aa: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+mca@mca38:~/luqman$ tar -cvf 
+tar: option requires an argument -- 'f'
+Try 'tar --help' or 'tar --usage' for more information.
+mca@mca38:~/luqman$ wc newfile.txt
+ 5 11 55 newfile.txt
+mca@mca38:~/luqman$ cut -c 1-5 file3.txt
+cut: file3.txt: No such file or directory
+mca@mca38:~/luqman$ cut -c 1-5 newfile.txt
+lukku
+mazee
+amaaa
+today
+good 
+mca@mca38:~/luqman$ paste newfile.txt file2.txt
+paste: file2.txt: No such file or directory
+mca@mca38:~/luqman$ paste newfile.txt file.txt
+paste: file.txt: No such file or directory
+mca@mca38:~/luqman$ paste newfile.txt file3.txt
+paste: file3.txt: No such file or directory
+mca@mca38:~/luqman$ paste newfile.txt file1.txt
+paste: file1.txt: No such file or directory
+mca@mca38:~/luqman$ cat > file1.txt
+hello world
+this is a new worldmca@mca38:~/luqman$ paste newfile.txt file1.txt
+lukku	hello world
+mazee	this is a new world
+amaaan	
+today is good day	
+good day is today	
+mca@mca38:~/luqman$ grep "hello" file1.txt
+hello world
+mca@mca38:~/luqman$ expr 10+5
+10+5
+mca@mca38:~/luqman$ expr 10 + 5
+15
+mca@mca38:~/luqman$ expr 10 - 5
+5
+mca@mca38:~/luqman$ expr 10 \* 5
+50
+mca@mca38:~/luqman$ expr 10 / 5
+2
+mca@mca38:~/luqman$ expr 10 % 5
+0
+mca@mca38:~/luqman$ chmod +rwx file1.txt
+mca@mca38:~/luqman$ chown user1 fil.txt
+chown: invalid user: ‘user1’
+mca@mca38:~/luqman$ chown user1 file.txt
+chown: invalid user: ‘user1’
+mca@mca38:~/luqman$ chown user1 file1.txt
+chown: invalid user: ‘user1’
+mca@mca38:~/luqman$ chown file1.txt
+chown: missing operand after ‘file1.txt’
+Try 'chown --help' for more information.
+mca@mca38:~/luqman$ sudo chown file1.txt
+[sudo] password for mca: 
+chown: missing operand after ‘file1.txt’
+Try 'chown --help' for more information.
+ 
+mca@mca38:~/luqman$ wc -l < file1.txt
+1
+mca@mca38:~/luqman$ ls | wc -1
+wc: invalid option -- '1'
+Try 'wc --help' for more information.
+mca@mca38:~/luqman$ ls | wc -l
+10
+mca@mca38:~/luqman$ ls | head
+abcd.tar
+bengali
+file1.txt
+maseeh
+newfile2.txt
+newfile.txt
+panjabi
+pappa
+parava
+sudani
+mca@mca38:~/luqman$ ls | tail
+abcd.tar
+bengali
+file1.txt
+maseeh
+newfile2.txt
+newfile.txt
+panjabi
+pappa
+parava
+sudani
+mca@mca38:~/luqman$ sudo useradd student1
+mca@mca38:~/luqman$ sudo passwd student1
+New password: 
+Retype new password: 
+passwd: password updated successfully
+mca@mca38:~/luqman$ sudo usermode -l f1.txt
+sudo: usermode: command not found
+mca@mca38:~/luqman$ sudo usermod -l f1.txt file1.txt
+usermod: user 'file1.txt' does not exist
+mca@mca38:~/luqman$ sudo usermod -l f1.txt newfile.txt
+usermod: user 'newfile.txt' does not exist
+mca@mca38:~/luqman$ sudo userdel student1
+mca@mca38:~/luqman$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+udev             3952172        0   3952172   0% /dev
+tmpfs             800368     1724    798644   1% /run
+/dev/sda5      148899576 67925064  73338032  49% /
+tmpfs            4001836        0   4001836   0% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+tmpfs            4001836        0   4001836   0% /sys/fs/cgroup
+/dev/loop1           128      128         0 100% /snap/bare/5
+/dev/loop0       1588224  1588224         0 100% /snap/android-studio/205
+/dev/loop2       1526784  1526784         0 100% /snap/android-studio/209
+/dev/loop3        179456   179456         0 100% /snap/chromium/3307
+/dev/loop4        185344   185344         0 100% /snap/chromium/3369
+/dev/loop5         56832    56832         0 100% /snap/core18/2976
+/dev/loop9         75776    75776         0 100% /snap/core22/2163
+/dev/loop12       224256   224256         0 100% /snap/gnome-3-34-1804/72
+/dev/loop6         56832    56832         0 100% /snap/core18/2979
+/dev/loop11       528640   528640         0 100% /snap/gnome-42-2204/226
+/dev/loop7         65408    65408         0 100% /snap/core20/2686
+/dev/loop15        68480    68480         0 100% /snap/core24/1349
+/dev/loop13        48768    48768         0 100% /snap/cups/1142
+/dev/loop14        68480    68480         0 100% /snap/core24/1267
+/dev/loop10        75776    75776         0 100% /snap/core22/2216
+/dev/loop8         65408    65408         0 100% /snap/core20/2717
+/dev/loop17        50048    50048         0 100% /snap/cups/1146
+/dev/loop16       544128   544128         0 100% /snap/gnome-42-2204/247
+/dev/loop21      1287680  1287680         0 100% /snap/pycharm-community/560
+/dev/loop23        93952    93952         0 100% /snap/gtk-common-themes/1535
+/dev/loop20       404480   404480         0 100% /snap/mesa-2404/1165
+/dev/loop19       223744   223744         0 100% /snap/gnome-3-34-1804/93
+/dev/loop22       993536   993536         0 100% /snap/pycharm-community/538
+/dev/loop28        49280    49280         0 100% /snap/snapd/25935
+/dev/loop25        12544    12544         0 100% /snap/snap-store/1216
+/dev/loop26        12672    12672         0 100% /snap/snap-store/959
+/dev/loop27        52224    52224         0 100% /snap/snapd/25577
+/dev/loop24        66688    66688         0 100% /snap/gtk-common-themes/1515
+/dev/loop18       685952   685952         0 100% /snap/gnome-46-2404/145
+tmpfs             800364       48    800316   1% /run/user/1000
+mca@mca38:~/luqman$ ps -e
+    PID TTY          TIME CMD
+      1 ?        00:00:01 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 rcu_gp
+      4 ?        00:00:00 rcu_par_gp
+      5 ?        00:00:00 slub_flushwq
+      6 ?        00:00:00 netns
+      8 ?        00:00:00 kworker/0:0H-events_highpri
+     10 ?        00:00:00 mm_percpu_wq
+     11 ?        00:00:00 rcu_tasks_rude_
+     12 ?        00:00:00 rcu_tasks_trace
+     13 ?        00:00:00 ksoftirqd/0
+     14 ?        00:00:01 rcu_sched
+     15 ?        00:00:00 migration/0
+     16 ?        00:00:00 idle_inject/0
+     18 ?        00:00:00 cpuhp/0
+     19 ?        00:00:00 cpuhp/1
+     20 ?        00:00:00 idle_inject/1
+     21 ?        00:00:00 migration/1
+     22 ?        00:00:00 ksoftirqd/1
+     24 ?        00:00:00 kworker/1:0H-events_highpri
+     25 ?        00:00:00 cpuhp/2
+     26 ?        00:00:00 idle_inject/2
+     27 ?        00:00:00 migration/2
+     28 ?        00:00:00 ksoftirqd/2
+     30 ?        00:00:00 kworker/2:0H-events_highpri
+     31 ?        00:00:00 cpuhp/3
+     32 ?        00:00:00 idle_inject/3
+     33 ?        00:00:00 migration/3
+     34 ?        00:00:00 ksoftirqd/3
+     36 ?        00:00:00 kworker/3:0H-events_highpri
+     37 ?        00:00:00 kdevtmpfs
+     38 ?        00:00:00 inet_frag_wq
+     39 ?        00:00:00 kauditd
+     40 ?        00:00:00 khungtaskd
+     41 ?        00:00:00 oom_reaper
+     42 ?        00:00:00 writeback
+     43 ?        00:00:00 kcompactd0
+     44 ?        00:00:00 ksmd
+     45 ?        00:00:00 khugepaged
+     92 ?        00:00:00 kintegrityd
+     93 ?        00:00:00 kblockd
+     94 ?        00:00:00 blkcg_punt_bio
+     95 ?        00:00:00 tpm_dev_wq
+     96 ?        00:00:00 ata_sff
+     97 ?        00:00:00 md
+     98 ?        00:00:00 edac-poller
+     99 ?        00:00:00 devfreq_wq
+    100 ?        00:00:00 watchdogd
+    103 ?        00:00:00 kswapd0
+    104 ?        00:00:00 kworker/0:1H-kblockd
+    105 ?        00:00:00 ecryptfs-kthrea
+    108 ?        00:00:00 kthrotld
+    110 ?        00:00:00 acpi_thermal_pm
+    112 ?        00:00:00 vfio-irqfd-clea
+    114 ?        00:00:00 mld
+    115 ?        00:00:00 ipv6_addrconf
+    117 ?        00:00:00 kworker/u32:3-events_unbound
+    125 ?        00:00:00 kstrp
+    128 ?        00:00:00 zswap-shrink
+    129 ?        00:00:00 kworker/u33:0+i915_flip
+    134 ?        00:00:00 charger_manager
+    165 ?        00:00:00 kworker/2:1H-kblockd
+    170 ?        00:00:01 kworker/3:3-events
+    199 ?        00:00:00 kworker/3:1H-events_highpri
+    206 ?        00:00:00 scsi_eh_0
+    209 ?        00:00:00 scsi_tmf_0
+    213 ?        00:00:00 scsi_eh_1
+    214 ?        00:00:00 scsi_tmf_1
+    215 ?        00:00:00 scsi_eh_2
+    216 ?        00:00:00 scsi_tmf_2
+    217 ?        00:00:00 kworker/1:1H-events_highpri
+    218 ?        00:00:00 scsi_eh_3
+    219 ?        00:00:00 scsi_tmf_3
+    220 ?        00:00:00 scsi_eh_4
+    221 ?        00:00:00 scsi_tmf_4
+    223 ?        00:00:00 scsi_eh_5
+    224 ?        00:00:00 scsi_tmf_5
+    287 ?        00:00:00 jbd2/sda5-8
+    288 ?        00:00:00 ext4-rsv-conver
+    331 ?        00:00:00 systemd-journal
+    390 ?        00:00:00 systemd-udevd
+    417 ?        00:00:00 systemd-resolve
+    419 ?        00:00:00 systemd-timesyn
+    492 ?        00:00:00 irq/26-mei_me
+    580 ?        00:00:00 cryptd
+    647 ?        00:00:00 card0-crtc0
+    648 ?        00:00:00 card0-crtc1
+    694 ?        00:00:00 accounts-daemon
+    699 ?        00:00:00 acpid
+    702 ?        00:00:01 avahi-daemon
+    706 ?        00:00:00 cron
+    707 ?        00:00:00 cupsd
+    712 ?        00:00:00 dbus-daemon
+    715 ?        00:00:00 NetworkManager
+    756 ?        00:00:00 irqbalance
+    766 ?        00:00:00 networkd-dispat
+    772 ?        00:00:00 polkitd
+    776 ?        00:00:00 rsyslogd
+    797 ?        00:00:06 snapd
+    798 ?        00:00:00 switcheroo-cont
+    802 ?        00:00:00 systemd-logind
+    803 ?        00:00:00 thermald
+    807 ?        00:00:00 udisksd
+    808 ?        00:00:00 wpa_supplicant
+    810 ?        00:00:00 avahi-daemon
+    860 ?        00:00:00 cups-browsed
+    865 ?        00:00:00 colord
+    868 ?        00:00:02 run-cups-browse
+    871 ?        00:00:01 run-cupsd
+    875 ?        00:00:00 unattended-upgr
+    891 ?        00:00:00 ModemManager
+    913 ?        00:00:00 gdm3
+    933 ?        00:00:01 tor
+    935 ?        00:00:00 gdm-session-wor
+    956 ?        00:00:00 systemd
+    957 ?        00:00:00 (sd-pam)
+    960 ?        00:00:00 dbus
+    962 ?        00:00:00 dbus
+    966 ?        00:00:11 mysqld
+    968 ?        00:00:00 pulseaudio
+    971 ?        00:00:00 gnome-keyring-d
+    975 tty2     00:00:00 gdm-x-session
+    978 tty2     00:00:30 Xorg
+    979 ?        00:00:00 rtkit-daemon
+    994 ?        00:00:00 dbus-daemon
+   1031 tty2     00:00:00 gnome-session-b
+   1113 ?        00:00:00 whoopsie
+   1118 ?        00:00:00 kerneloops
+   1128 ?        00:00:00 kerneloops
+   1131 ?        00:00:00 iprt-VBoxWQueue
+   1132 ?        00:00:00 iprt-VBoxTscThr
+   1251 ?        00:00:00 ssh-agent
+   1297 ?        00:00:00 at-spi-bus-laun
+   1302 ?        00:00:00 dbus-daemon
+   1318 ?        00:00:00 gnome-session-c
+   1326 ?        00:00:00 gnome-session-b
+   1356 ?        00:00:35 gnome-shell
+   1372 ?        00:00:00 gvfsd
+   1377 ?        00:00:00 gvfsd-fuse
+   1391 ?        00:00:00 ibus-daemon
+   1395 ?        00:00:00 ibus-memconf
+   1396 ?        00:00:01 ibus-extension-
+   1400 ?        00:00:00 ibus-x11
+   1403 ?        00:00:00 ibus-portal
+   1412 ?        00:00:00 at-spi2-registr
+   1416 ?        00:00:00 xdg-permission-
+   1418 ?        00:00:00 gnome-shell-cal
+   1427 ?        00:00:00 evolution-sourc
+   1438 ?        00:00:00 goa-daemon
+   1439 ?        00:00:00 upowerd
+   1450 ?        00:00:00 evolution-calen
+   1466 ?        00:00:00 goa-identity-se
+   1484 ?        00:00:00 dconf-service
+   1491 ?        00:00:00 evolution-addre
+   1499 ?        00:00:00 gvfs-udisks2-vo
+   1507 ?        00:00:00 gvfs-goa-volume
+   1513 ?        00:00:00 gvfs-mtp-volume
+   1517 ?        00:00:00 gvfs-afc-volume
+   1522 ?        00:00:00 gvfs-gphoto2-vo
+   1537 ?        00:00:00 gjs
+   1539 ?        00:00:00 gsd-a11y-settin
+   1540 ?        00:00:00 gsd-color
+   1541 ?        00:00:00 gsd-datetime
+   1545 ?        00:00:00 gsd-housekeepin
+   1547 ?        00:00:00 gsd-keyboard
+   1548 ?        00:00:00 gsd-media-keys
+   1549 ?        00:00:00 gsd-power
+   1552 ?        00:00:00 gsd-print-notif
+   1553 ?        00:00:00 gsd-rfkill
+   1554 ?        00:00:00 gsd-screensaver
+   1555 ?        00:00:00 gsd-sharing
+   1557 ?        00:00:00 gsd-smartcard
+   1558 ?        00:00:00 gsd-sound
+   1559 ?        00:00:00 gsd-usb-protect
+   1560 ?        00:00:00 gsd-wacom
+   1561 ?        00:00:00 gsd-wwan
+   1562 ?        00:00:00 gsd-xsettings
+   1567 ?        00:00:00 evolution-alarm
+   1576 ?        00:00:00 gsd-disk-utilit
+   1593 ?        00:00:00 ibus-engine-sim
+   1667 ?        00:00:00 gsd-printer
+   1734 ?        00:00:00 gvfsd-trash
+   1774 ?        00:00:04 snap-store
+   1788 ?        00:00:00 tracker-miner-f
+   1799 ?        00:00:00 xdg-document-po
+   1858 ?        00:00:01 cupsd
+   1859 ?        00:00:01 cups-proxyd
+   1910 ?        00:00:00 run-cups-browse
+   1911 ?        00:00:00 sleep
+   1936 ?        00:00:00 kworker/u33:1
+   1985 ?        00:00:00 xdg-desktop-por
+   1989 ?        00:00:00 xdg-desktop-por
+   2021 ?        00:00:00 fwupd
+   2050 ?        00:00:00 dbus
+   2761 ?        00:00:00 gvfsd-metadata
+   2764 ?        00:00:00 update-notifier
+   2813 ?        00:00:06 gnome-terminal-
+   2821 pts/0    00:00:00 bash
+   2845 ?        00:00:00 kworker/u32:0-ext4-rsv-conversion
+   2848 ?        00:00:05 nautilus
+   2889 ?        00:04:07 firefox
+   2950 ?        00:00:00 Socket Process
+   2985 ?        00:00:04 Privileged Cont
+   2992 ?        00:00:00 RDD Process
+   3048 ?        00:00:00 WebExtensions
+   3112 ?        00:00:00 Utility Process
+   3120 ?        00:00:03 Isolated Web Co
+   3140 ?        00:00:01 Isolated Web Co
+   3199 ?        00:10:45 Isolated Web Co
+   3511 ?        00:00:00 oosplash
+   3546 ?        00:00:21 soffice.bin
+   3568 ?        00:00:00 dbus
+   3569 ?        00:00:00 dbus
+   3570 ?        00:00:00 dbus
+   3775 ?        00:00:01 kworker/0:2-events
+   4248 ?        00:00:01 gedit
+   4284 pts/1    00:00:00 bash
+   4342 ?        00:00:01 kworker/2:0-events
+   4415 ?        00:00:00 kworker/0:1-events
+   4588 ?        00:00:00 kworker/3:1-events
+   4679 ?        00:00:00 kworker/1:2-events
+   4738 ?        00:00:00 kworker/2:1-events
+   4838 ?        00:00:00 kworker/1:0-events
+   4868 ?        00:00:00 Web Content
+   4905 ?        00:00:00 kworker/2:2-events
+   4972 ?        00:00:00 Web Content
+   4997 ?        00:00:00 kworker/0:0-events
+   4998 ?        00:00:00 kworker/u32:1
+   5014 ?        00:00:00 Web Content
+   5036 ?        00:00:00 kworker/1:1-events
+   5051 pts/1    00:00:00 ps
+mca@mca38:~/luqman$ top
+
+top - 11:49:42 up 41 min,  1 user,  load average: 0.15, 0.17, 0.34
+Tasks: 231 total,   2 running, 229 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  2.0 us,  1.1 sy,  0.0 ni, 97.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   7816.1 total,   2610.1 free,   2718.7 used,   2487.3 buff/cache
+MiB Swap:   2048.0 total,   2048.0 free,      0.0 used.   4438.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND  
+   4868 mca       20   0 6727576 121772  82424 S   2.0   1.5   0:00.61 Isolate+ 
+   3199 mca       20   0 3854108 955420 124504 S   1.3  11.9  10:46.92 Isolate+ 
+    978 mca       20   0  336484  56408  28760 S   0.7   0.7   0:31.29 Xorg     
+    966 mysql     20   0 2315892 395860  38188 S   0.3   4.9   0:11.55 mysqld   
+   1356 mca       20   0 4118420 230656  84156 S   0.3   2.9   0:35.62 gnome-s+ 
+   2813 mca       20   0  816544  51936  38820 S   0.3   0.6   0:06.30 gnome-t+ 
+   2889 mca       20   0 3663152 410420 190460 S   0.3   5.1   4:08.27 firefox  
+   5089 mca       20   0   11984   3860   3216 R   0.3   0.0   0:00.04 top      
+      1 root      20   0  168580  11916   8444 S   0.0   0.1   0:01.19 systemd  
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 kthreadd 
+      3 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_gp   
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 rcu_par+ 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 slub_fl+ 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 netns    
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 kworker+ 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 mm_perc+ 
+     11 root      20   0       0      0      0 S   0.0   0.0   0:00.00 rcu_tas+
