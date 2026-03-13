@@ -1,0 +1,11 @@
+mca@MCA49:~$ vi file3.sh
+mca@MCA49:~$ chmod +x largest.sh
+chmod: cannot access 'largest.sh': No such file or directory
+mca@MCA49:~$ chmod +x file3.sh
+mca@MCA49:~$ ./file3.sh
+Enter three numbers:
+10  25  15
+Largest number is: 25
+mca@MCA49:~$ 
+
+

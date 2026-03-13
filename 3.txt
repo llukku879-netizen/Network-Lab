@@ -1,0 +1,878 @@
+mca@MCA49:~/shanu/LINUX$ man ls
+
+[3]+  Stopped                 man ls
+mca@MCA49:~/shanu/LINUX$ pwd
+/home/mca/shanu/LINUX
+mca@MCA49:~/shanu/LINUX$ ls 
+shanu.txt  d1,d2,d3,d4,d5  f1.txt  Student.class  Student.java
+mca@MCA49:~/shanu/LINUX$ ls -l
+total 20
+-rw-rw-r-- 1 mca mca    7 Feb 20 14:45 shanu.txt
+drwxrwxr-x 2 mca mca 4096 Feb 20 14:37 d1,d2,d3,d4,d5
+-rw-rw-r-- 1 mca mca   22 Mar  2 11:01 f1.txt
+-rw-rw-r-- 1 mca mca 2204 Feb 25 09:44 Student.class
+-rw-rw-r-- 1 mca mca 1246 Feb 25 09:44 Student.java
+mca@MCA49:~/shanu/LINUX$ ls -a
+.  ..  shanu.txt  d1,d2,d3,d4,d5  f1.txt  Student.class  Student.java
+mca@MCA49:~/shanu/LINUX$ echo "hello world!1"
+echo "hello worldgcc set.c"
+hello worldgcc set.c
+mca@MCA49:~/shanu/LINUX$ echo "THis is sample">f1.txt
+mca@MCA49:~/shanu/LINUX$ read a
+2
+mca@MCA49:~/shanu/LINUX$ read b
+5
+mca@MCA49:~/shanu/LINUX$ echo $a $b
+2 5
+mca@MCA49:~/shanu/LINUX$ read -p "enter your name"
+enter your namesheena
+mca@MCA49:~/shanu/LINUX$ 
+mca@MCA49:~/shanu/LINUX$ 
+mca@MCA49:~/shanu/LINUX$ 
+mca@MCA49:~/shanu/LINUX$ 
+mca@MCA49:~/shanu/LINUX$ read -p "enter your name: "
+enter your name: shanu
+mca@MCA49:~/shanu/LINUX$ cat f1.txt
+THis is sample
+mca@MCA49:~/shanu/LINUX$ cat >f2.txt
+hi hwello 
+gud mng
+shanu
+shanu
+aseem 
+lookman
+
+^C
+mca@MCA49:~/shanu/LINUX$ cat f1
+cat: f1: No such file or directory
+mca@MCA49:~/shanu/LINUX$ cat f1.txt
+THis is sample
+mca@MCA49:~/shanu/LINUX$ cat f2.txt
+hi hwello 
+gud mng
+shanu
+shanu
+aseem 
+lookman
+mca@MCA49:~/shanu/LINUX$ cat >>f3.txt
+kcjjsh
+cjsdh^C
+mca@MCA49:~/shanu/LINUX$ catr f3.txt
+Command 'catr' not found, did you mean:
+  command 'car' from deb ucommon-utils (7.0.1-0.1)
+  command 'catm' from deb mescc-tools (1.4.0-1)
+  command 'cat' from deb coreutils (9.4-3ubuntu6.1)
+  command 'ctr' from deb containerd (1.7.28-0ubuntu1~24.04.2)
+  command 'cstr' from deb liwc (1.21-2)
+Try: sudo apt install <deb name>
+mca@MCA49:~/shanu/LINUX$ cat f3.txt
+kcjjsh
+mca@MCA49:~/shanu/LINUX$ more  f2.txt
+hi hwello 
+gud mng
+shanu
+shanu
+aseem 
+lookman
+mca@MCA49:~/shanu/LINUX$ more -5 f2.txt
+hi hwello 
+gud mng
+shanu
+shanu
+aseem 
+lookman
+mca@MCA49:~/shanu/LINUX$ less f2.txt
+
+[4]+  Stopped                 less f2.txt
+mca@MCA49:~/shanu/LINUX$ less f1.txt f2.txt
+
+[5]+  Stopped                 less f1.txt f2.txt
+mca@MCA49:~/shanu/LINUX$ less -G f1.txt
+
+[6]+  Stopped                 less -G f1.txt
+mca@MCA49:~/shanu/LINUX$ cd ..
+mca@MCA49:~/shanu$ cd LINUX
+mca@MCA49:~/shanu/LINUX$ cd skm
+bash: cd: skm: No such file or directory
+mca@MCA49:~/shanu/LINUX$ mkdir  abc
+mca@MCA49:~/shanu/LINUX$ mkdir xx yy zzz
+mca@MCA49:~/shanu/LINUX$ ls
+abc	    d1,d2,d3,d4,d5  f2.txt  Student.class  xx  zzz
+shanu.txt  f1.txt	    f3.txt  Student.java   yy
+mca@MCA49:~/shanu/LINUX$ rmdir d1,d2,d3,d4,d5
+mca@MCA49:~/shanu/LINUX$ ls
+abc	    f1.txt  f3.txt	   Student.java  yy
+shanu.txt  f2.txt  Student.class  xx		 zzz
+mca@MCA49:~/shanu/LINUX$ find /shanu/LINUX -name f1.txt
+find: ‘/shanu/LINUX’: No such file or directory
+mca@MCA49:~/shanu/LINUX$ finnd path -typr d
+Command 'finnd' not found, did you mean:
+  command 'find' from deb findutils (4.9.0-5)
+  command 'innd' from deb inn (1:1.7.2q-48)
+Try: sudo apt install <deb name>
+mca@MCA49:~/shanu/LINUX$ finnd path -type d
+Command 'finnd' not found, did you mean:
+  command 'find' from deb findutils (4.9.0-5)
+  command 'innd' from deb inn (1:1.7.2q-48)
+Try: sudo apt install <deb name>
+mca@MCA49:~/shanu/LINUX$ find -type d
+.
+./xx
+./abc
+./zzz
+./yy
+mca@MCA49:~/shanu/LINUX$ find -type f
+./Student.class
+./Student.java
+./shanu.txt
+./f3.txt
+./f1.txt
+./f2.txt
+mca@MCA49:~/shanu/LINUX$ cp f1.txt f2.txt
+mca@MCA49:~/shanu/LINUX$ cp f1.txt/aa
+cp: missing destination file operand after 'f1.txt/aa'
+Try 'cp --help' for more information.
+mca@MCA49:~/shanu/LINUX$ mv f1.txt f3.txt
+mca@MCA49:~/shanu/LINUX$ ls f3.txt
+f3.txt
+mca@MCA49:~/shanu/LINUX$ mv tt ggg
+mv: cannot stat 'tt': No such file or directory
+mca@MCA49:~/shanu/LINUX$ mkdir tt gg
+mca@MCA49:~/shanu/LINUX$ mv tt ggg
+mca@MCA49:~/shanu/LINUX$ rm file.txt
+rm: cannot remove 'file.txt': No such file or directory
+mca@MCA49:~/shanu/LINUX$ rm f2.txt
+mca@MCA49:~/shanu/LINUX$ ls 
+abc  shanu.txt  f3.txt  gg  ggg  Student.class  Student.java  xx  yy  zzz
+mca@MCA49:~/shanu/LINUX$ rm f1.txt f2.txt
+rm: cannot remove 'f1.txt': No such file or directory
+rm: cannot remove 'f2.txt': No such file or directory
+mca@MCA49:~/shanu/LINUX$ rm xx yy
+rm: cannot remove 'xx': Is a directory
+rm: cannot remove 'yy': Is a directory
+mca@MCA49:~/shanu/LINUX$ lsz
+Command 'lsz' not found, did you mean:
+  command 'lsd' from snap lsd (0.16.0)
+  command 'ls' from deb coreutils (9.4-3ubuntu6.1)
+  command 'lsw' from deb suckless-tools (47-1)
+  command 'lsh' from deb lsh-client (2.1-14)
+  command 'lrz' from deb lrzip (0.651-2ubuntu1)
+  command 'lsd' from deb lsd (0.23.1-8)
+  command 'lsc' from deb livescript (1.6.1+dfsg-3)
+  command 'lsm' from deb lsm (1.0.4-2)
+  command 'lz' from deb mtools (4.0.43-1)
+  command 'sz' from deb lrzsz (0.12.21-10)
+See 'snap info <snapname>' for additional versions.
+mca@MCA49:~/shanu/LINUX$ ls
+abc  shanu.txt  f3.txt  gg  ggg  Student.class  Student.java  xx  yy  zzz
+mca@MCA49:~/shanu/LINUX$ rm gg
+rm: cannot remove 'gg': Is a directory
+mca@MCA49:~/shanu/LINUX$ rm f3,txt
+rm: cannot remove 'f3,txt': No such file or directory
+mca@MCA49:~/shanu/LINUX$ rm f3.txt
+mca@MCA49:~/shanu/LINUX$ cat > f1.txt
+d
+d
+d
+d
+d
+d
+d
+d
+ewfwef
+ds
+fcsd
+f
+sdfsdf
+mca@MCA49:~/shanu/LINUX$ tar -cvf abdc.tar aa
+tar: aa: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+mca@MCA49:~/shanu/LINUX$ mkdir abcd.tar
+mca@MCA49:~/shanu/LINUX$ tar -cvf abdc.tar 
+tar: Cowardly refusing to create an empty archive
+Try 'tar --help' or 'tar --usage' for more information.
+mca@MCA49:~/shanu/LINUX$ tar -cvf abdc.tar aa
+tar: aa: Cannot stat: No such file or directory
+tar: Exiting with failure status due to previous errors
+mca@MCA49:~/shanu/LINUX$ wc f1.txt
+13 13 40 f1.txt
+mca@MCA49:~/shanu/LINUX$ wc -l f1.txt
+13 f1.txt
+mca@MCA49:~/shanu/LINUX$ wc -w f1.txt
+13 f1.txt
+mca@MCA49:~/shanu/LINUX$ head  -n
+head: option requires an argument -- 'n'
+Try 'head --help' for more information.
+mca@MCA49:~/shanu/LINUX$ head f1.txt
+d
+d
+d
+d
+d
+d
+d
+d
+ewfwef
+ds
+mca@MCA49:~/shanu/LINUX$ head -5 f1.txt
+d
+d
+d
+d
+d
+mca@MCA49:~/shanu/LINUX$ head -20 f1.txt
+d
+d
+d
+d
+d
+d
+d
+d
+ewfwef
+ds
+fcsd
+f
+sdfsdf
+mca@MCA49:~/shanu/LINUX$ tail -5 f1.txt
+ewfwef
+ds
+fcsd
+f
+sdfsdf
+mca@MCA49:~/shanu/LINUX$ cut -c 1-5 f1.txt
+d
+d
+d
+d
+d
+d
+d
+d
+ewfwe
+ds
+fcsd
+f
+sdfsd
+mca@MCA49:~/shanu/LINUX$ paste -d f1.txt f2.txt
+paste: f2.txt: No such file or directory
+mca@MCA49:~/shanu/LINUX$ cat > f2.txt
+jdfchnsd
+sdfcsdknksd
+sacjsdc
+asdbhdc
+sdcbsdcs
+dshsdijsd
+sdbcns
+dasads
+cs
+dc
+sdcs
+csd
+c
+sdc
+sc
+sc
+d
+csdmca@MCA49:~/shanu/LINUX$ ls
+abc	  abdc.tar    f1.txt  gg   Student.class  xx  zzz
+abcd.tar  shanu.txt  f2.txt  ggg  Student.java   yy
+mca@MCA49:~/shanu/LINUX$ cat f1.txt
+d
+d
+d
+d
+d
+d
+d
+d
+ewfwef
+ds
+fcsd
+f
+sdfsdf
+mca@MCA49:~/shanu/LINUX$ cat f2.txt\
+> cat f2.txt
+cat: f2.txtcat: No such file or directory
+jdfchnsd
+sdfcsdknksd
+sacjsdc
+asdbhdc
+sdcbsdcs
+dshsdijsd
+sdbcns
+dasads
+cs
+dc
+sdcs
+csd
+c
+sdc
+sc
+sc
+d
+csdmca@MCA49:~/shanu/LINUX$ paste -d f1.txt f2.txt
+jdfchnsd
+sdfcsdknksd
+sacjsdc
+asdbhdc
+sdcbsdcs
+dshsdijsd
+sdbcns
+dasads
+cs
+dc
+sdcs
+csd
+c
+sdc
+sc
+sc
+d
+csd
+mca@MCA49:~/shanu/LINUX$ cat f1.txt
+d
+d
+d
+d
+d
+d
+d
+d
+ewfwef
+ds
+fcsd
+f
+sdfsdf
+mca@MCA49:~/shanu/LINUX$ cat f2.txt
+jdfchnsd
+sdfcsdknksd
+sacjsdc
+asdbhdc
+sdcbsdcs
+dshsdijsd
+sdbcns
+dasads
+cs
+dc
+sdcs
+csd
+c
+sdc
+sc
+sc
+d
+csdmca@MCA49:~/shanu/LINUX$ grep "ilahia" f1.txt
+mca@MCA49:~/shanu/LINUX$ more f1.txt
+d
+d
+d
+d
+d
+d
+d
+d
+ewfwef
+ds
+fcsd
+f
+sdfsdf
+mca@MCA49:~/shanu/LINUX$ more f1.txt more f2.txt
+::::::::::::::
+f1.txt
+::::::::::::::
+d
+d
+d
+d
+d
+d
+d
+d
+ewfwef
+ds
+fcsd
+f
+sdfsdf
+more: cannot open more: No such file or directory
+--More--(Next file: f2.txt)
+[7]+  Stopped                 more f1.txt more f2.txt
+mca@MCA49:~/shanu/LINUX$ grep -i "ilahia " f1.txt
+mca@MCA49:~/shanu/LINUX$ expr 10+5
+10+5
+mca@MCA49:~/shanu/LINUX$ expr 10 + 5
+15
+mca@MCA49:~/shanu/LINUX$ expr 10 - 5
+5
+mca@MCA49:~/shanu/LINUX$ expr 10 / 5
+2
+mca@MCA49:~/shanu/LINUX$ expr 10 % 5
+0
+mca@MCA49:~/shanu/LINUX$ expr length "shanu"
+6
+mca@MCA49:~/shanu/LINUX$ chmod +rwx f1.txt
+mca@MCA49:~/shanu/LINUX$ chmod chmod 755 file.sh
+chmod: invalid mode: ‘chmod’
+Try 'chmod --help' for more information.
+mca@MCA49:~/shanu/LINUX$ chmod chmod 755 f1.txt
+chmod: invalid mode: ‘chmod’
+Try 'chmod --help' for more information.
+mca@MCA49:~/shanu/LINUX$ chmod u+v f1.txt
+chmod: invalid mode: ‘u+v’
+Try 'chmod --help' for more information.
+mca@MCA49:~/shanu/LINUX$ sudo chown user1 f1.txt
+[sudo] password for mca: 
+chown: invalid user: ‘user1’
+mca@MCA49:~/shanu/LINUX$ sudo chown user1 f1.txt
+chown: invalid user: ‘user1’
+mca@MCA49:~/shanu/LINUX$ mca
+Command 'mca' not found, did you mean:
+  command 'mcs' from snap maven-central-search (0.9.4)
+  command 'mcx' from deb mcl (1:22-282+ds-2)
+  command 'mma' from deb mma (21.09-1)
+  command 'mcs' from deb mono-mcs (6.8.0.105+dfsg-3.5ubuntu1)
+  command 'xca' from deb xca (2.5.0-1)
+  command 'mc' from deb mc (3:4.8.30-1ubuntu0.1)
+  command 'mco' from deb mcollective-client (2.12.5+dfsg-1.1)
+  command 'm-a' from deb module-assistant (0.11.11ubuntu1)
+  command 'pca' from deb eigensoft (8.0.0+dfsg-1)
+  command 'mcp' from deb mmv (2.5.1-1)
+  command 'mda' from deb mailutils-mda (1:3.16-1build1)
+  command 'mcd' from deb mtools (4.0.43-1)
+  command 'mcat' from deb mtools (4.0.43-1)
+  command 'mcl' from deb mcl (1:22-282+ds-2)
+  command 'mcv' from deb scotch (7.0.4-1)
+See 'snap info <snapname>' for additional versions.
+mca@MCA49:~/shanu/LINUX$ ls >f1.txt
+mca@MCA49:~/shanu/LINUX$ lss f2.txt
+Command 'lss' not found, but there are 16 similar ones.
+mca@MCA49:~/shanu/LINUX$ cat f2.txt
+jdfchnsd
+sdfcsdknksd
+sacjsdc
+asdbhdc
+sdcbsdcs
+dshsdijsd
+sdbcns
+dasads
+cs
+dc
+sdcs
+csd
+c
+sdc
+sc
+sc
+d
+csdmca@MCA49:~/shanu/LINUX$ ls f2.txt
+f2.txt
+mca@MCA49:~/shanu/LINUX$ cat f2.txt
+jdfchnsd
+sdfcsdknksd
+sacjsdc
+asdbhdc
+sdcbsdcs
+dshsdijsd
+sdbcns
+dasads
+cs
+dc
+sdcs
+csd
+c
+sdc
+sc
+sc
+d
+csdmca@MCA49:~/shanu/LINUX$ ls | wc -l
+14
+mca@MCA49:~/shanu/LINUX$ ls | wc tail
+wc: tail: No such file or directory
+mca@MCA49:~/shanu/LINUX$ ls -l | tail
+-rwxrwxr-x 1 mca mca   108 Mar  2 11:33 f1.txt
+-rw-rw-r-- 1 mca mca   102 Mar  2 11:19 f2.txt
+drwxrwxr-x 2 mca mca  4096 Mar  2 11:14 gg
+drwxrwxr-x 2 mca mca  4096 Mar  2 11:14 ggg
+-rw-rw-r-- 1 mca mca  7677 Mar  2 11:23 LINUXprogram.txt
+-rw-rw-r-- 1 mca mca  2204 Feb 25 09:44 Student.class
+-rw-rw-r-- 1 mca mca  1246 Feb 25 09:44 Student.java
+drwxrwxr-x 2 mca mca  4096 Mar  2 11:10 xx
+drwxrwxr-x 2 mca mca  4096 Mar  2 11:10 yy
+drwxrwxr-x 2 mca mca  4096 Mar  2 11:10 zzz
+mca@MCA49:~/shanu/LINUX$ sudo useradd f1
+mca@MCA49:~/shanu/LINUX$ usermod  -u 1100 stuydent1
+usermod: user 'stuydent1' does not exist
+mca@MCA49:~/shanu/LINUX$ usermod  -u 1100 f1
+usermod: Permission denied.
+usermod: cannot lock /etc/passwd; try again later.
+mca@MCA49:~/shanu/LINUX$ passwd -S f1.txt
+passwd: user 'f1.txt' does not exist
+mca@MCA49:~/shanu/LINUX$ passwd -S f1
+passwd: You may not view or modify password information for f1.
+mca@MCA49:~/shanu/LINUX$ mkdir student1
+mca@MCA49:~/shanu/LINUX$ userdel student1
+userdel: user 'student1' does not exist
+mca@MCA49:~/shanu/LINUX$ cd ..
+mca@MCA49:~/shanu$ cd ..
+mca@MCA49:~$ userdel student1
+userdel: user 'student1' does not exist
+mca@MCA49:~$ cd shanu
+mca@MCA49:~/shanu$ cd LINUX
+mca@MCA49:~/shanu/LINUX$ df -h
+Filesystem      Size  Used Avail Use% Mounted on
+tmpfs           1.6G  2.4M  1.6G   1% /run
+/dev/nvme0n1p6  181G   44G  128G  26% /
+tmpfs           7.7G     0  7.7G   0% /dev/shm
+tmpfs           5.0M  8.0K  5.0M   1% /run/lock
+efivarfs        256K  127K  125K  51% /sys/firmware/efi/efivars
+/dev/nvme0n1p1   96M   33M   64M  34% /boot/efi
+tmpfs           1.6G  128K  1.6G   1% /run/user/1000
+mca@MCA49:~/shanu/LINUX$ df
+Filesystem     1K-blocks     Used Available Use% Mounted on
+tmpfs            1605128     2384   1602744   1% /run
+/dev/nvme0n1p6 188768352 45841544 133265112  26% /
+tmpfs            8025640        0   8025640   0% /dev/shm
+tmpfs               5120        8      5112   1% /run/lock
+efivarfs             256      127       125  51% /sys/firmware/efi/efivars
+/dev/nvme0n1p1     98304    33338     64966  34% /boot/efi
+tmpfs            1605128      128   1605000   1% /run/user/1000
+mca@MCA49:~/shanu/LINUX$ \ps -e
+    PID TTY          TIME CMD
+      1 ?        00:00:01 systemd
+      2 ?        00:00:00 kthreadd
+      3 ?        00:00:00 pool_workqueue_release
+      4 ?        00:00:00 kworker/R-rcu_gp
+      5 ?        00:00:00 kworker/R-sync_wq
+      6 ?        00:00:00 kworker/R-kvfree_rcu_reclaim
+      7 ?        00:00:00 kworker/R-slub_flushwq
+      8 ?        00:00:00 kworker/R-netns
+     10 ?        00:00:00 kworker/0:0H-events_highpri
+     13 ?        00:00:00 kworker/R-mm_percpu_wq
+     14 ?        00:00:00 ksoftirqd/0
+     15 ?        00:00:04 rcu_preempt
+     16 ?        00:00:00 rcu_exp_par_gp_kthread_worker/0
+     17 ?        00:00:00 rcu_exp_gp_kthread_worker
+     18 ?        00:00:00 migration/0
+     19 ?        00:00:00 idle_inject/0
+     20 ?        00:00:00 cpuhp/0
+     21 ?        00:00:00 cpuhp/2
+     22 ?        00:00:00 idle_inject/2
+     23 ?        00:00:00 migration/2
+     24 ?        00:00:00 ksoftirqd/2
+     26 ?        00:00:00 kworker/2:0H-events_highpri
+     27 ?        00:00:00 cpuhp/4
+     28 ?        00:00:00 idle_inject/4
+     29 ?        00:00:00 migration/4
+     30 ?        00:00:00 ksoftirqd/4
+     32 ?        00:00:00 kworker/4:0H-events_highpri
+     33 ?        00:00:00 cpuhp/6
+     34 ?        00:00:00 idle_inject/6
+     35 ?        00:00:00 migration/6
+     36 ?        00:00:00 ksoftirqd/6
+     38 ?        00:00:00 kworker/6:0H-events_highpri
+     39 ?        00:00:00 cpuhp/8
+     40 ?        00:00:00 idle_inject/8
+     41 ?        00:00:00 migration/8
+     42 ?        00:00:00 ksoftirqd/8
+     44 ?        00:00:00 kworker/8:0H-events_highpri
+     45 ?        00:00:00 cpuhp/10
+     46 ?        00:00:00 idle_inject/10
+     47 ?        00:00:00 migration/10
+     48 ?        00:00:00 ksoftirqd/10
+     50 ?        00:00:00 kworker/10:0H-events_highpri
+     51 ?        00:00:00 cpuhp/12
+     52 ?        00:00:00 idle_inject/12
+     53 ?        00:00:00 migration/12
+     54 ?        00:00:00 ksoftirqd/12
+     56 ?        00:00:00 kworker/12:0H-events_highpri
+     57 ?        00:00:00 cpuhp/13
+     58 ?        00:00:00 idle_inject/13
+     59 ?        00:00:00 migration/13
+     60 ?        00:00:00 ksoftirqd/13
+     62 ?        00:00:00 kworker/13:0H-events_highpri
+     63 ?        00:00:00 cpuhp/14
+     64 ?        00:00:00 idle_inject/14
+     65 ?        00:00:00 migration/14
+     66 ?        00:00:00 ksoftirqd/14
+     68 ?        00:00:00 kworker/14:0H-events_highpri
+     69 ?        00:00:00 cpuhp/15
+     70 ?        00:00:00 idle_inject/15
+     71 ?        00:00:00 migration/15
+     72 ?        00:00:00 ksoftirqd/15
+     74 ?        00:00:00 kworker/15:0H-events_highpri
+     75 ?        00:00:00 cpuhp/1
+     76 ?        00:00:00 idle_inject/1
+     77 ?        00:00:00 migration/1
+     78 ?        00:00:00 ksoftirqd/1
+     80 ?        00:00:00 kworker/1:0H-events_highpri
+     81 ?        00:00:00 cpuhp/3
+     82 ?        00:00:00 idle_inject/3
+     83 ?        00:00:00 migration/3
+     84 ?        00:00:00 ksoftirqd/3
+     86 ?        00:00:00 kworker/3:0H-events_highpri
+     87 ?        00:00:00 cpuhp/5
+     88 ?        00:00:00 idle_inject/5
+     89 ?        00:00:00 migration/5
+     90 ?        00:00:00 ksoftirqd/5
+     92 ?        00:00:00 kworker/5:0H-events_highpri
+     93 ?        00:00:00 cpuhp/7
+     94 ?        00:00:00 idle_inject/7
+     95 ?        00:00:00 migration/7
+     96 ?        00:00:00 ksoftirqd/7
+     97 ?        00:00:00 kworker/7:0-events
+     98 ?        00:00:00 kworker/7:0H-events_highpri
+     99 ?        00:00:00 cpuhp/9
+    100 ?        00:00:00 idle_inject/9
+    101 ?        00:00:00 migration/9
+    102 ?        00:00:00 ksoftirqd/9
+    103 ?        00:00:00 kworker/9:0-mm_percpu_wq
+    104 ?        00:00:00 kworker/9:0H-events_highpri
+    105 ?        00:00:00 cpuhp/11
+    106 ?        00:00:00 idle_inject/11
+    107 ?        00:00:00 migration/11
+    108 ?        00:00:00 ksoftirqd/11
+    110 ?        00:00:00 kworker/11:0H-events_highpri
+    111 ?        00:00:00 kdevtmpfs
+    112 ?        00:00:00 kworker/R-inet_frag_wq
+    113 ?        00:00:00 rcu_tasks_kthread
+    114 ?        00:00:00 rcu_tasks_rude_kthread
+    115 ?        00:00:00 rcu_tasks_trace_kthread
+    116 ?        00:00:00 kauditd
+    117 ?        00:00:00 khungtaskd
+    118 ?        00:00:00 oom_reaper
+    121 ?        00:00:00 kworker/R-writeback
+    122 ?        00:00:00 kcompactd0
+    123 ?        00:00:00 ksmd
+    124 ?        00:00:00 khugepaged
+    125 ?        00:00:00 kworker/R-kblockd
+    126 ?        00:00:00 kworker/R-blkcg_punt_bio
+    127 ?        00:00:00 kworker/R-kintegrityd
+    129 ?        00:00:00 irq/9-acpi
+    130 ?        00:00:00 kworker/13:1-mm_percpu_wq
+    131 ?        00:00:00 kworker/1:1-mm_percpu_wq
+    132 ?        00:00:00 kworker/14:1-events
+    133 ?        00:00:00 kworker/R-tpm_dev_wq
+    134 ?        00:00:00 kworker/R-ata_sff
+    135 ?        00:00:00 kworker/R-md
+    136 ?        00:00:00 kworker/R-md_bitmap
+    137 ?        00:00:00 kworker/R-edac-poller
+    138 ?        00:00:00 kworker/R-devfreq_wq
+    139 ?        00:00:00 watchdogd
+    140 ?        00:00:00 kworker/8:1-events
+    141 ?        00:00:00 kworker/R-quota_events_unbound
+    142 ?        00:00:00 kworker/12:1H-i915_cleanup
+    144 ?        00:00:00 kswapd0
+    145 ?        00:00:00 ecryptfs-kthread
+    146 ?        00:00:00 kworker/R-kthrotld
+    147 ?        00:00:00 irq/122-aerdrv
+    148 ?        00:00:00 irq/123-aerdrv
+    149 ?        00:00:00 kworker/R-acpi_thermal_pm
+    154 ?        00:00:00 kworker/R-hfi-updates
+    155 ?        00:00:00 kworker/R-mld
+    156 ?        00:00:00 kworker/13:1H-kblockd
+    157 ?        00:00:00 kworker/R-ipv6_addrconf
+    158 ?        00:00:00 kworker/R-kstrp
+    159 ?        00:00:00 kworker/2:1-i915-unordered
+    160 ?        00:00:00 kworker/3:1-mm_percpu_wq
+    174 ?        00:00:00 kworker/R-charger_manager
+    175 ?        00:00:00 kworker/0:1H-kblockd
+    198 ?        00:00:00 kworker/14:1H-kblockd
+    202 ?        00:00:00 kworker/8:1H-i915_cleanup
+    219 ?        00:00:00 kworker/9:1H-kblockd
+    221 ?        00:00:00 kworker/11:1H-kblockd
+    224 ?        00:00:00 kworker/2:1H-kblockd
+    245 ?        00:00:00 kworker/1:1H-kblockd
+    246 ?        00:00:00 kworker/15:1H-kblockd
+    261 ?        00:00:00 kworker/7:1H-kblockd
+    262 ?        00:00:00 kworker/6:1H-i915_cleanup
+    263 ?        00:00:00 kworker/10:1H-i915_cleanup
+    264 ?        00:00:00 kworker/4:1H-i915_cleanup
+    265 ?        00:00:00 kworker/3:1H-kblockd
+    266 ?        00:00:00 kworker/5:1H-kblockd
+    316 ?        00:00:00 irq/152-aerdrv
+    318 ?        00:00:00 kworker/R-nvme-wq
+    319 ?        00:00:00 kworker/R-nvme-reset-wq
+    320 ?        00:00:00 kworker/R-nvme-delete-wq
+    321 ?        00:00:00 kworker/R-nvme-auth-wq
+    322 ?        00:00:00 scsi_eh_0
+    323 ?        00:00:00 kworker/R-scsi_tmf_0
+    324 ?        00:00:00 scsi_eh_1
+    325 ?        00:00:00 kworker/R-scsi_tmf_1
+    326 ?        00:00:00 scsi_eh_2
+    327 ?        00:00:00 kworker/R-scsi_tmf_2
+    328 ?        00:00:00 scsi_eh_3
+    329 ?        00:00:00 kworker/R-scsi_tmf_3
+    330 ?        00:00:00 scsi_eh_4
+    331 ?        00:00:00 kworker/R-scsi_tmf_4
+    332 ?        00:00:00 scsi_eh_5
+    333 ?        00:00:00 kworker/R-scsi_tmf_5
+    334 ?        00:00:00 scsi_eh_6
+    335 ?        00:00:00 kworker/R-scsi_tmf_6
+    336 ?        00:00:00 scsi_eh_7
+    337 ?        00:00:00 kworker/R-scsi_tmf_7
+    341 ?        00:00:03 kworker/u64:6-i915
+    384 ?        00:00:00 jbd2/nvme0n1p6-8
+    385 ?        00:00:00 kworker/R-ext4-rsv-conversion
+    435 ?        00:00:01 systemd-journal
+    511 ?        00:00:03 kworker/0:2-pm
+    522 ?        00:00:00 systemd-udevd
+    554 ?        00:00:00 psimon
+    617 ?        00:00:00 kworker/11:2-mm_percpu_wq
+    621 ?        00:00:00 irq/171-mei_me
+    695 ?        00:00:00 kworker/R-cfg80211
+    716 ?        00:00:00 kworker/R-ttm
+    718 ?        00:00:00 kworker/13:2-cgroup_free
+    719 ?        00:00:00 card1-crtc0
+    720 ?        00:00:00 card1-crtc1
+    721 ?        00:00:00 card1-crtc2
+    722 ?        00:00:00 card1-crtc3
+   2020 ?        00:00:00 gsd-screensaver
+   2023 ?        00:00:00 gsd-sharing
+   2024 ?        00:00:00 gsd-smartcard
+   2027 ?        00:00:00 gsd-sound
+   2032 ?        00:00:00 gsd-wacom
+   2070 ?        00:00:00 gvfs-udisks2-vo
+   2092 ?        00:00:00 gsd-disk-utilit
+   2104 ?        00:00:00 evolution-alarm
+   2162 ?        00:00:00 ibus-dconf
+   2164 ?        00:00:01 ibus-extension-
+   2165 ?        00:00:00 goa-daemon
+   2174 ?        00:00:00 ibus-portal
+   2239 ?        00:00:00 goa-identity-se
+   2248 ?        00:00:00 evolution-calen
+   2250 ?        00:00:00 gvfs-gphoto2-vo
+   2258 ?        00:00:00 gvfs-afc-volume
+   2270 ?        00:00:00 gvfs-mtp-volume
+   2277 ?        00:00:00 gvfs-goa-volume
+   2289 ?        00:00:00 evolution-addre
+   4821 ?        00:00:00 mutter-x11-fram
+   7156 ?        00:00:00 kworker/5:0-events
+   7159 ?        00:00:00 kworker/0:0-pm
+   7168 ?        00:00:00 Web Content
+   7205 ?        00:00:00 kworker/4:2-mm_percpu_wq
+   7206 ?        00:00:00 kworker/u64:2-events_unbound
+   7224 ?        00:00:00 Web Content
+   7290 ?        00:00:00 kworker/10:0-mm_percpu_wq
+   7308 ?        00:00:00 kworker/6:0-i915-unordered
+   7330 ?        00:00:00 Web Content
+   7380 ?        00:00:00 kworker/8:0-i915-unordered
+   7403 ?        00:00:00 kworker/4:1-i915-unordered
+   7413 pts/0    00:00:00 ps
+mca@MCA49:~/shanu/LINUX$ ps -ef
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  0 10:52 ?        00:00:01 /sbin/init splash
+root           2       0  0 10:52 ?        00:00:00 [kthreadd]
+root           3       2  0 10:52 ?        00:00:00 [pool_workqueue_release
+root           4       2  0 10:52 ?        00:00:00 [kworker/R-rcu_gp]
+root           5       2  0 10:52 ?        00:00:00 [kworker/R-sync_wq]
+root           6       2  0 10:52 ?        00:00:00 [kworker/R-kvfree_rcu_r
+root           7       2  0 10:52 ?        00:00:00 [kworker/R-slub_flushwq
+root           8       2  0 10:52 ?        00:00:00 [kworker/R-netns]
+root          10       2  0 10:52 ?        00:00:00 [kworker/0:0H-events_hi
+root          13       2  0 10:52 ?        00:00:00 [kworker/R-mm_percpu_wq
+root          14       2  0 10:52 ?        00:00:00 [ksoftirqd/0]
+root          15       2  0 10:52 ?        00:00:04 [rcu_preempt]
+root          16       2  0 10:52 ?        00:00:00 [rcu_exp_par_gp_kthread
+root          17       2  0 10:52 ?        00:00:00 [rcu_exp_gp_kthread_wor
+root          18       2  0 10:52 ?        00:00:00 [migration/0]
+root          19       2  0 10:52 ?        00:00:00 [idle_inject/0]
+root          20       2  0 10:52 ?        00:00:00 [cpuhp/0]
+root          21       2  0 10:52 ?        00:00:00 [cpuhp/2]
+root          22       2  0 10:52 ?        00:00:00 [idle_inject/2]
+root          23       2  0 10:52 ?        00:00:00 [migration/2]
+root          68  0.0  0.0      0     0 ?        I<   10:52   0:00 [kworker
+root          69  0.0  0.0      0     0 ?        S    10:52   0:00 [cpuhp/1
+root          70  0.0  0.0      0     0 ?        S    10:52   0:00 [idle_in
+root          71  0.0  0.0      0     0 ?        S    10:52   0:00 [migrati
+root          72  0.0  0.0      0     0 ?        S    10:52   0:00 [ksoftir
+root          74  0.0  0.0      0     0 ?        I<   10:52   0:00 [kworker
+root        6071  0.0  0.0      0    0 ?        I    11:09   0:00 [kworker
+root        6074  0.0  0.0      0     0 ?        I    11:10   0:00 [kworker
+root        6154  0.0  0.0      0     0 ?        I    11:12   0:00 [kworker
+root        6249  0.0  0.0      0     0 ?        I<   11:12   0:01 [kworker
+root        6457  0.0  0.0      0     0 ?        I    11:16   0:00 [kworker
+root        6468  0.0  0.0      0     0 ?        I    11:16   0:00 [kworker
+root        6523  0.0  0.0      0     0 ?        I<   11:20   0:00 [kworker
+root        6531  0.1  1.1 621916 182308 ?       Ssl  11:21   0:01 /usr/lib
+root        6569  0.0  0.0      0     0 ?        I    11:21   0:00 [kworker
+
+mca         7422  0.7  0.4 2580184 73636 ?       Sl   11:38   0:00 /snap/fi
+mca         7457  100  0.0  13896  4868 pts/0    R+   11:38   0:00 ps aux
+mca@MCA49:~/shanu/LINUX$ ps -u username
+error: user name does not exist
+
+Usage:
+ ps [options]
+
+ Try 'ps --help <simple|list|output|threads|misc|all>'
+  or 'ps --help <s|l|o|t|m|a>'
+ for additional help text.
+
+For more details see ps(1).
+mca@MCA49:~/shanu/LINUX$ top -d 5
+
+top - 11:39:04 up 46 min,  1 user,  load average: 0.58, 0.63, 0.58
+Tasks: 363 total,   1 running, 354 sleeping,   8 stopped,   0 zombie
+%Cpu(s):   1.0/0.4     1[                                                ] 
+MiB Mem :  15675.1 total,   7836.7 free,   3385.5 used,   5027.8 buff/cache
+MiB Swap:   4096.0 total,   4096.0 free,      0.0 used.  12289.6 avail Mem 
+Change delay from 5.0 to sh
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ 
+   4856 mca       20   0 1532460 390068 250636 S   8.6   2.4   2:15.97 
+   1774 mca       20   0 5026772 293348 123012 S   6.6   1.8   1:16.52 
+   4778 mca       20   0 1466400 163120 116764 S   4.4   1.0   1:34.34 
+   4315 mca       20   0  626856  57400  44792 S   1.6   0.4   0:10.25 
+   1540 mca        9 -11  406960  18976  13808 S   1.2   0.1   0:38.55 
+   4779 mca       20   0  573696  84544  58708 S   0.8   0.5   0:11.80 
+    727 root     -51   0       0      0      0 S   0.6   0.0   0:17.68 
+   1495 mysql     20   0 2376240 395464  35840 S   0.6   2.5   0:17.62 
+   1536 mca        9 -11  118496  17196   8936 S   0.6   0.1   0:13.99 
+   1234 root      20   0  337084  20076  16308 S   0.4   0.1   0:11.56 
+   2873 mca       20   0   11.5g 597552 246232 S   0.4   3.7   1:01.09 
+     15 root      20   0       0      0      0 I   0.2   0.0   0:04.88 
+    341 root      20   0       0      0      0 I   0.2   0.0   0:03.13 
+    511 root      20   0       0      0      0 I   0.2   0.0   0:03.95 
+   1541 mca        9 -11  118872  15356   9308 S   0.2   0.1   0:07.14 
+   4073 root      20   0       0      0      0 I   0.2   0.0   0:01.01 
+   6523 root       0 -20       0      0      0 I   0.2   0.0   0:00.66 
+   6586 root      20   0       0      0      0 I   0.2   0.0   0:01.29 
+   7224 mca       20   0 2580168  74416  58872 S   0.2   0.5   0:00.28 
+      1 root      20   0   23760  14896   9420 S   0.0   0.1   0:01.67 
+      2 root      20   0       0      0      0 S   0.0   0.0   0:00.00 
+      3 root      20   0       0      0      0 S   0.0   0.0   0:00.00 
+      4 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      5 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      6 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      7 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+      8 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+     10 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+     13 root       0 -20       0      0      0 I   0.0   0.0   0:00.00 
+     14 root      20   0       0      0      0 S   0.0   0.0   0:00.06 
+[8]+  Stopped                 top -d 5
+mca@MCA49:~/shanu/LINUX$ user@192.168.1.10
+user@192.168.1.10: command not found
+mca@MCA49:~/shanu/LINUX$ ssh user@192.168.1.10
+ssh: connect to host 192.168.1.10 port 22: No route to host
+mca@MCA49:~/shanu/LINUX$ scp -r 
+usage: scp [-346ABCOpqRrsTv] [-c cipher] [-D sftp_server_path] [-F ssh_config]
+           [-i identity_file] [-J destination] [-l limit] [-o ssh_option]
+           [-P port] [-S program] [-X sftp_option] source ... target
+mca@MCA49:~/shanu/LINUX$ ssh-keygen
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/mca/.ssh/id_ed25519): ssh-keygen -t rsa -b 4096
+Enter passphrase (empty for no passphrase): 
+
+[9]+  Stopped                 ssh-keygen
+mca@MCA49:~/shanu/LINUX$ ssh-copy-id user@192.168.1.10
+/usr/bin/ssh-copy-id: ERROR: No identities found
+mca@MCA49:~/shanu/LINUX$ passwd -l student1
+passwd: Permission denied.
+mca@MCA49:~/shanu/LINUX$ sudo passwd -l student1
+passwd: user 'student1' does not exist
+mca@MCA49:~/shanu/LINUX$ useradd student1
+useradd: Permission denied.
+useradd: cannot lock /etc/passwd; try again later.
+mca@MCA49:~/shanu/LINUX$ sudo useradd student1
+mca@MCA49:~/shanu/LINUX$ sudo passwd -l student1
+passwd: password changed.
+mca@MCA49:~/shanu/LINUX$ 

@@ -1,0 +1,170 @@
+1 a) 
+
+Create a directory named lab1, move into it, create a file data.txt, write some content using echo, and display it using cat.
+(Commands: mkdir, cd, echo, cat)
+
+		mca@MCA49:~/shanu/commands$ mkdir lab1
+		mca@MCA49:~/shanu/commands$ cd lab1
+		mca@MCA49:~/shanu/commands/lab1$ echo "Linux Lab Experiment" > data.txt
+		mca@MCA49:~/shanu/commands/lab1$ cat data.txt
+		Linux Lab Experiment
+
+ b) Display the last 10 lines of a file and count the number of empty lines. (Commands: tail, grep '^$')
+
+		ca@MCA49:~/shanu/commands/lab1$ tail -n 10 data.txt
+		anfin
+		shanu
+		azeem
+		prathik
+		albin
+		lukman
+		ibhrahim
+		raju
+		gopal
+		motumca@MCA49:~/shanu/commands/lab1$  grep '^$' data.txt | wc -l
+		0
+		mca@MCA49:~/shanu/commands/lab1$ 
+
+c)   Create a new user student1, set password, create a script file test.sh, change its ownership to student1, and grant execute permission only to the owner. (Commands: useradd, passwd, chown, chmod)
+
+		mca@MCA49:~/shanu/commands/lab1$  sudo useradd student2
+		mca@MCA49:~/shanu/commands/lab1$ 
+		
+		mca@MCA49:~/shanu/commands/lab1$  sudo passwd student2
+		New password: 
+		Retype new password: 
+		passwd: password updated successfully
+		
+		
+		mca@MCA49:~/shanu/commands/lab1$ sudo touch test.sh
+		mca@MCA49:~/shanu/commands/lab1$ sudo chown student2 test.sh
+		mca@MCA49:~/shanu/commands/lab1$ sudo chmod 700 test.sh
+		mca@MCA49:~/shanu/commands/lab1$ ls -l test.sh
+		-rwx------ 1 student2 root 0 Mar  6 14:36 test.sh
+		
+		
+2   a)Create a file students.txt, insert multiple lines using cat, and display lines containing the word "MCA". (Commands: cat, grep)
+
+		mca@MCA49:~/shanu/commands/lab1$ cat > students.txt
+		Anu MCA             
+		Rahul BCA
+		Meera MCA
+		John BSc
+		
+		
+		mca@MCA49:~/shanu/commands/lab1$ grep "MCA" students.txt
+		Anu MCA
+		Meera MCA
+		
+b)    Copy students.txt to backup.txt, rename it to final.txt, and delete the original file. (Commands: cp, mv, rm)
+ 
+ 		mca@MCA49:~/shanu/commands/lab1$ cp students.txt backup.txt
+		mca@MCA49:~/shanu/commands/lab1$ mv backup.txt final.txt
+		mca@MCA49:~/shanu/commands/lab1$ rm students.txt
+		mca@MCA49:~/shanu/commands/lab1$ ls
+		data.txt  final.txt  test.sh
+
+c)  Generate an SSH key pair and copy it to a remote system for password-less login. (Commands: ssh-keygen, ssh-copy-id, ssh)
+
+		mca@MCA49:~/shanu/commands/lab1$ ssh-keygen
+		Generating public/private rsa key pair.
+		Enter file in which to save the key (/home/mca/.ssh/id_rsa): home/mca/commands
+		Enter passphrase (empty for no passphrase): 
+		Enter same passphrase again: 
+
+3. A)   Count the number of words and lines in a file, then display the first 5 lines. (Commands: wc, head)
+
+		mca@MCA49:~/shanu/commands/lab1$ wc data.txt
+		12 13 84 data.txt
+		mca@MCA49:~/shanu/commands/lab1$ head -n 5 data.txt
+		safwan 
+		yaseen
+		ameen
+		anfin
+		shanu
+		
+b)Create 3 files and compress them into archive.tar, then extract into a new directory. (Commands: touch, tar, mkdir)
+
+		mca@MCA49:~/shanu/commands/lab1$ touch file1.txt file2.txt file3.txt
+		mca@MCA49:~/shanu/commands/lab1$ tar -cvf archive.tar file1.txt file2.txt file3.txt
+		file1.txt
+		file2.txt
+		file3.txt
+		mca@MCA49:~/shanu/commands/lab1$ 
+		
+		mca@MCA49:~/shanu/commands/lab1$ mkdir extracted_files
+		mca@MCA49:~/shanu/commands/lab1$ tar -xvf archive.tar -C extracted_files
+		file1.txt
+		file2.txt
+		file3.txt
+		mca@MCA49:~/shanu/commands/lab1$ ls extracted_files
+		file1.txt  file2.txt  file3.txt
+		mca@MCA49:~/shanu/commands/lab1$ 
+		
+c)Search for lines that start with "Error" and do not contain the word "critical". (Commands: grep '^Error', grep -v)
+
+		mca@MCA49:~/shanu/commands/lab1$ grep '^Error' logfile.txt | grep -v "critical"
+		grep: logfile.txt: No such file or directory
+		
+		
+4)
+a. Create a file using echo, append additional content using redirection (>>), and display using less. (Commands: echo, >>, less)
+
+		Linux Operating System
+		Shell Scripting Basics
+		sample.txt (END)
+		
+b.Grant read and write permission to the group for final.txt, and verify permissions.(Commands: chmod, ls -l)
+
+
+
+c.Display running processes of the current logged-in user in detailed format and show disk usage in human-readable format.
+(Commands: ps, df -h)
+
+			mca@MCA49:~/shanu/commands$ ps -u $USER -f
+			UID          PID    PPID  C STIME TTY          TIME CMD
+			mca         1178       1  0 11:00 ?        00:00:00 /lib/syste
+			mca         1179    1178  0 11:00 ?        00:00:00 (sd-pam)
+
+		mca@MCA49:~/shanu/commands$ df -h
+		Filesystem      Size  Used Avail Use% Mounted on
+		udev            3.7G     0  3.7G   0% /dev
+		tmpfs           763M  2.4M  761M   1% /run
+
+5)
+a. Find all .txt files in the current directory and show their details.
+(Commands: find, ls)
+		mca@MCA49:~/shanu/commands$ find . -name "*.txt"
+		./shanu4.txt
+		./shanu1.txt
+		./shanu2.txt
+		
+		mca@MCA49:~/shanu/commands$ ls -l *.txt
+		-rw-rw-r-- 1 mca mca  46 Mar  9 11:05 sample.txt
+		-rw-rw-r-- 1 mca mca  68 Mar  2 11:10 shanu1.txt
+b .Extract the first column from a file using cut, combine it with another file using paste, and save the output using redirection.(Commands: cut, paste, >)
+
+
+		mca@MCA49:~/shanu/commands$ cat > file1.txt
+		shanu
+		safwan 
+		yaseen
+		mca@MCA49:~/shanu/commands$ cat > file2.txt
+		MCA
+		BCA
+		MSc
+		mca@MCA49:~/shanu/commands$ cut -d " " -f1 file1.txt
+		shanu
+		safwan
+		yaseen
+
+c.Monitor system processes using top, exit the command properly, then list current directory contents with detailed permissions. (Commands: top, ls -l)
+  
+  
+  		mca@MCA49:~/shanu/commands$ cut -d " " -f1 file1.txt | paste - file2.txt > result.txt
+		mca@MCA49:~/shanu/commands$ cat result.txt
+		shanu	MCA
+		safwan	BCA
+		yaseen	MSc
+
+

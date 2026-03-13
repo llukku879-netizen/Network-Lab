@@ -1,0 +1,13 @@
+mca@MCA49:~$ vi file2.sh
+mca@MCA49:~$ chmod +x file2.sh
+mca@MCA49:~$ ./file2.sh
+Enter a number:
+3
+3 is Odd
+mca@MCA49:~$ chmod +x file2.sh
+mca@MCA49:~$ ./file2.sh
+Enter a number:
+8
+8 is Even
+mca@MCA49:~$ 
+
